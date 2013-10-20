@@ -6,6 +6,10 @@ case "$1" in
     compile)
         cc $2
         ;;
+    
+    run)
+        ./a.out
+        ;;
 
     commit)
         git add $2
@@ -17,6 +21,6 @@ case "$1" in
         ;;
 
     *)
-        echo $"Usage: $0 {compile <filename> |commit <filename> <commit message>|upstream}"
+        echo $"Usage: $0 {compile <filename>|run|commit <filename> <commit message>|upstream}"
 
 esac
