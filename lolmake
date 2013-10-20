@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+case "$1" in
+    compile)
+        cc $2
+        ;;
+
+    commit)
+        git add $2
+        git commit -m "$3"
+        ;;  
+    
+    upstream)
+        git push origin
+        ;;
+
+    *)
+        echo $"Usage: $0 {compile <filename> |commit <filename> <commit message>|upstream}"
+
+esac
