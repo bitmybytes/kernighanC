@@ -14,7 +14,7 @@ int main()
 
     fahr = lower;
 
-    printf("%s | %s\n", "Celsius", "Farenheit");
+    printf("%s | %s\n", "Farenheit", "Celsius");
     printf("====================\n");
 
     while(fahr <= upper) {
