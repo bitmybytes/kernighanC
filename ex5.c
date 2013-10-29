@@ -1,18 +1,15 @@
 #include <stdio.h>
 
-/* 1.5.2 This program counts character in input */
+/* 1.5.2 This program counts character in input : 2nd version */
 
 int main()
-{
-    long nc;
+{  
+    double nc;
 
-    nc = 0;
+    for(nc = 0; getchar() != EOF; ++nc)
+        ;
 
-    while(getchar() != EOF)
-        ++nc;
-
-    //slightly modified to give meaningful log
-    printf("The number of characters entered (including \\n) is %ld\n", nc);
+    printf("The number of character including (\\n) is %.0f\n", nc);
     
     return 0;
 }
