@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Ex 1-9. Program to copy input to output */
+/* Ex 1-9. Program to copy input to output. Replacing each string of one or more blanks by a single blank.  */
 
 int main()
 {
