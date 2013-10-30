@@ -19,6 +19,10 @@ case "$1" in
     upstream)
         git push origin
         ;;
+    
+    downstream)
+        git pull origin
+        ;;
 
     *)
         echo $"Usage: $0 {compile <filename>|run|commit <filename> <commit message>|upstream}"
