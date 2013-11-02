@@ -17,8 +17,6 @@ void _copy(void);
 int main()
 {   
     int len;
-    extern int max;
-    extern char longest[]; //declare here
 
     max = 0;
     
@@ -43,8 +41,7 @@ int main()
 int _getline(void)
 {
     int c, i;
-    extern char line[];
-    
+   
     for (i = 0; i < MAXLINE - 1 && (c = getchar()) != EOF && c != '\n'; i++)
     {
         line[i] = c;
@@ -64,7 +61,6 @@ int _getline(void)
 void _copy(void)
 {
     int i;
-    extern char line[], longest[];
 
     i = 0;
 
