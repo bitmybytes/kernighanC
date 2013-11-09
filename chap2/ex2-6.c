@@ -12,7 +12,7 @@ int setbits(int x, int p, int n, int y);
 int main()
 {
     
-    printf("setbits return value  is %d\n", setbits(1024, 4, 2, 4021));
+    printf("setbits return value  is %d\n", setbits(1024, 4, 2, 4021)); //should return 1032
 
     return 0; //return SUCCESS
 }
@@ -25,6 +25,6 @@ int setbits(int x, int p, int n, int y)
     // y = zzzzz111
     // return zzzz111z
 
-    return  (x & ~(1 >> (31 - p) & 1 << (31 - (p + n)))) |
-            (y & ~(~0 << n)) << (p - n + 1);
+    return  (x & ~(0xFFFFFFFF >> (31 - p) & 0xFFFFFFFF << (p - n + 1))) |
+            (y & ~(0xFFFFFFFF << n)) << (p - n + 1);
 }
