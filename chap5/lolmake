@@ -8,7 +8,7 @@ case "$1" in
         ;;
     
     run)
-        ./a.out
+        ./a.out "${@:2}" #skip the first name which is 'run'
         ;;
 
     commit)
